@@ -14,17 +14,18 @@ int main ()
 	cin>>A[i];
 	 
 	 cout<<"sorted array"<<endl;
-	 
-	for (int i=0;i<n;i++){
-		for (int j=i+1;j<n;j++){
-			if (A[j]<A[i]){
-				int temp=A[j];
-				A[j]=A[i];
-				A[i]=temp;
-				
+	
+	int counter=1;
+	while (counter<n){
+		for (int i=0;i<n-counter;i++){
+			if  (A[i]>A[i+1]){
+				int temp=A[i];
+				A[i]=A[i+1];
+				A[i+1]=temp;
 			}
 		}
-	} 
+		counter++;
+	}
 	for (int i=0;i<n;i++)
 	cout<<A[i]<<" ";
 }
