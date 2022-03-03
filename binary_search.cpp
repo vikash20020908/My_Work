@@ -1,3 +1,4 @@
+
 # include <iostream>
 using namespace std;
 int main ()
@@ -14,6 +15,23 @@ int main ()
 	cout<<"enter the element"<<endl;
 	for (int i=0;i<n;i++)
 	cin>>row[i];
+	
+	for (int i=0;i<n-1;i++){
+        for (int j=i+1;j<n;j++){
+            if (row[j]<row[i]){
+                int tape=row[j];
+                row[j]=row[i];
+                row[i]=tape;
+            }
+        }
+    }
+    {cout<<"shorted array elements"<<endl;}
+    
+    for (int i=0;i<n;i++){
+    cout<<row[i]<<"  ";
+    }
+    cout<<endl;
+    
 	cout<<"enter the element to be search"<<endl;
     
     cin>>k;
@@ -27,7 +45,7 @@ int main ()
         first=mid+1;
         else if (row[mid]==k)
         {
-            cout<<"the element "<<k<<" found at location "<<mid;
+            cout<<"the element "<<k<<" found at location "<<mid+1;
             break;
         }
     else
