@@ -1,27 +1,47 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int findLarge(int [], int);
-int main()
+int main ()
 {
-    int arr[100], tot, larg, i;
-    cout<<"Enter the Size (max. 100): ";
-    cin>>tot;
-    cout<<"Enter "<<tot<<" Array Elements: ";
-    for(i=0; i<tot; i++)
-        cin>>arr[i];
-    larg = findLarge(arr, tot);
-    cout<<"\nLargest Number = "<<larg;
-    cout<<endl;
-    return 0;
-}
-int findLarge(int a[], int s)
-{
-    int i, m;
-    m = a[0];
-    for(i=1; i<s; i++)
+	cout<<"enter the size of array"<<endl;
+	
+	int n;
+	cin>>n;
+	int row[n];
+	{
+	cout<<"enter the element "<<endl;
+    } 
+	for(int i=0;i<n;i++)
+	cin>>row[i];
     {
-        if(m<a[i])
-            m = a[i];
+	cout<<"enter the element to be search "<<endl;
+     }
+	int k;
+	cin>>k;
+	bool flag=0;
+	for (int i=0;i<n;i++)
+	{
+		if (k==row[i])
+		{
+			cout<<"element to be found at location "<<i<<endl;
+			flag=1;
+		}
+	}
+	if (flag==0)
+	{
+		cout<<"element not found"<<endl;
     }
-    return m;
+    
+    int larg;
+    
+     for (int i=1;i<n;i++)
+    {
+        if (larg<row[i])
+        larg=row[i];
+    }
+    cout<<"\nlargest number is "<<larg;
+    cout<<endl;
+
+
+
+    return 0;
 }
