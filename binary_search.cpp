@@ -45,7 +45,7 @@ int main ()
         first=mid+1;
         else if (row[mid]==k)
         {
-            cout<<"the element "<<k<<" found at location "<<mid+1;
+            cout<<"the element "<<k<<" found at location "<<mid;
             break;
         }
     else
@@ -55,6 +55,25 @@ int main ()
     if  (first>last)
     cout<<endl<<"the element "<<k<<" not found in array"<<endl;
     
+    int larg;
+    for (int i=1;i<n;i++)
+    {
+        if (larg<row[i])
+        larg=row[i];
+    }
+    cout<<"\nlargest number is "<<larg;
+    cout<<endl;
+    int small;
+    small=row[0];
+     for (int i=1;i<n;i++)
+    {
+	if (small>row[i])
+	small=row[i];
+    }
+	{
+		cout<<"\nsmallest number is "<<small;
+		cout<<endl;
+	}
     
 
     return 0;

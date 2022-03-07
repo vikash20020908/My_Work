@@ -30,4 +30,25 @@ int main ()
 	{
 		cout<<"element not found"<<endl;
 	}
+	int larg;
+    for (int i=1;i<n;i++)
+    {
+        if (larg<row[i])
+        larg=row[i];
+    }
+    cout<<"\nlargest number is "<<larg;
+    cout<<endl;
+    int small;
+    small=row[0];
+     for (int i=1;i<n;i++)
+    {
+	if (small>row[i])
+	small=row[i];
+    }
+	{
+		cout<<"\nsmallest number is "<<small;
+		cout<<endl;
+	}
+	
 }
+
