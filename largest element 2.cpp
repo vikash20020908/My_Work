@@ -49,5 +49,10 @@ int main ()
 		cout<<"\nsmallest number is "<<small;
 		cout<<endl;
 	}
+	int sum;
+	for( int i=0; i<n; i++)
+      sum = sum+row[i];
+   cout<<"\nSum of all array elements = "<<sum;
+   cout<<endl;
     return 0;
 }
