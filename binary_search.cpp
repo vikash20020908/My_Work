@@ -81,6 +81,11 @@ int main ()
    cout<<"\nSum of all array elements = "<<sum;
    cout<<endl;
 
+   int mul=1;
+ for(int i=0; i<n; i++)
+      mul = mul*row[i];
+   cout<<"\nMultiplication Result of all Elements = "<<mul;
+   cout<<endl;
     return 0;
     
 	
