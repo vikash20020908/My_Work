@@ -1,5 +1,5 @@
+
 #include<stdio.h>  
-#include<graphics.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
@@ -42,31 +42,19 @@ void eightwaysymmetricplot(int xc,intyc,int x,int y)
 			errorcode=graphresult();
 			if (error!=grOK)
 			{
-			}
+			printf ("graphic error:%s\n", grapherrormsg(errorcod));
+			printf("press any key to halt:");
+			getch ();
+			exit(1)
 		}
+		printf("enter the value of xc and yc :");
+		scanf("%d%d",&xc,&yc);
+		printf("enter the value of radius :");
+		scanf("%",&r);
+		
+		bresenhamcircle(xc,yc,r);
+		getch();
+		closegraph();
+		return 0;
 	}
-    { 
-        y += 1;  
-        err += 2*y + 1;  
-    }  
-   
-    if (err > 0)  
-    {  
-        x -= 1;  
-        err -= 2*x + 1;  
-    }  
-    }  
-}  
- void main()  
-{  
-    int gdriver=DETECT, gmode, error, x, y, r;  
-    initgraph(&gdriver, &gmode, "c:\\turboc3\\bgi");  
-           printf("Enter radius of circle: ");  
-    scanf("%d", &r);  
-   
-    printf("Enter co-ordinates of center(x and y): ");  
-    scanf("%d%d", &x, &y);  
-    drawcircle(x, y, r);  
-    getch();  
-}  
-
+	
